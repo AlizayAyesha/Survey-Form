@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container"> 
+      <header class="header">
+        <h1 id="title" class='text-center'>freeCodeCamp Survey Form</h1>
+        <p id="description" class="description text-center"> "Thank you for taking the time to help us improve the platform"</p>
+      </header>
+    </div>
+<form id="survey-form">
+  <div class="from-group">
+    <label id="name-label" for="name">Name</label>
+    <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+  </div>
+<div class="from-group">
+  <label for="email" id="email-label">Email:</label>    
+  <input type="email" id="email" placeholder="Enter your email" required>
+</div>
+<div class="from-group">
+  <label for="number" id="number-label">Age<span class="clue"> (optional)</span>
+  </label>
+ <input type="number" id="number" placeholder="Enter a number" min="0" max="100" required>
+</div>
+<div class="from-group">
+  <p>Which option best describes your current role?</p>
+  <select id="dropdown" name="role" class="form-control" required>
+    <option disabled selected value=" ">Select current role</option>
+    <option value="1"> Student</option>
+    <option value="2">Full Time Job</option>
+    <option value="3">Full Time Learner</option>
+    <option value="4">Prefer not to say</option>
+    <option value="5">Other</option>
+    <option></option>
+  </select>
+</div>
+<div class="from-group">
+  <p>Would you recommend freeCodeCamp to a friend?</p>
+</div>
+<div class="from-group">
+  <label>
+  <input name="user-recommend" value="definitely" type="radio" class="input-radio" checked>
+  Definitely
+</label>
+<label>
+  <input name="user-recommend" value="Maybe" type="radio" class="input-radio" >
+  Maybe
+</label>
+<label>
+  <input name="user-recommend" value="no-sure" type="radio" class="input-radio">
+  Not sure
+</label>
+</div>
+<div class="from-group">
+  <p>What is your favorite feature of freeCodeCamp?</p>
+  <select id="most-like" name="mostlike" class="form-control" required>
+    <option value=" ">Select an option</option>
+    <option value="1"> Challenges</option>
+    <option value="2">Projects</option>
+    <option value="3">Open Source</option>
+  </select>
+</div>
+<div class="from-group"><p>
+  What would you like to see improved? 
+  <span class="clue">(Check all that apply)</span>
+</p></div>
+<div class="from-group">
+  <label>
+    <input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox">
+    Front-end-projects
+  </label>
+  <label>
+    <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox">Back-end-Project
+  </label>
+  <label><input name="prefer" value="data-visualization" type="checkbox" class="input-checkbox">Data Visualization</label>
+  <label><input name="prefer" value="challenges" type="checkbox" class="input-checkbox">Challenges</label>
+  <label><input name="prefer" value="open-source-community" type="checkbox" class="input-checkbox">Open Source Community</label>
+  <label><input name="prefer" value="gitter-help-rooms" type="checkbox" class="input-checkbox">Gitter help rooms</label>
+  <label><input name="prefer" value="videos" type="checkbox" class="input-checkbox">Videos</label>
+  <label><input name="prefer" value="city-meetups" type="checkbox" class="input-checkbox">City Meetup</label>
+  <label><input name="prefer" value="wiki" type="checkbox" class="input-checkbox">Wiki</label>
+  <label><input name="prefer" value="forum" type="checkbox" class="input-checkbox">Forum</label>
+  <label><input name="prefer" value="additional-courses" type="checkbox" class="input-checkbox">Additional Courses</label>
+</div>
+<div class="form">
+  <label><p>
+    Any comments or suggestions?
+  </p>
+    <textarea id="comments" class="input-textarea" name="comment" placeholder="Enter your comment here......."></textarea>
+  </label>
+</div>
+<div class="form">
+  <button type="submit" id="submit" class="submit-button"> Submit</button>
+</div>
+</form>
+</body>
+</html>

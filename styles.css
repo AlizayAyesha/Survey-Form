@@ -1,0 +1,192 @@
+/*family=Poppins:200i,400&display=swap');: This line imports the Google Fonts stylesheet for the font family "Poppins" with two weights, 200 (Extra Light) and 400 (Regular), and swaps it with the default font family.*/
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+
+/*This defines CSS custom properties (variables) that can be used throughout the stylesheet. For example, --color-white, --color-darkblue, --color-darkblue-alpha, and --color-green are defined here with corresponding color values.*/
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;}
+
+  /* *, *::before, *::after: These selectors apply styles to all elements, their before pseudo-elements, and their after pseudo-elements, respectively. The box-sizing: border-box; property ensures that padding and border are included in the element's total width and height.*/
+*,*::before*::after {
+  box-sizing: border-box;
+ }
+
+ /*body { ... }: Styles for the body element, setting the font family, size, weight, line height, text color, and margin to 0.*/
+ body {
+font-family: 'Popins', sans-serif;
+font-size: 1rem;
+font-weight: 400;
+line-height: 1.4;
+color: var(--color-white);
+margin: 0;
+ }
+
+
+/*body::before { ... }: This pseudo-element creates a full-screen background effect with a gradient overlay and an image. It's positioned behind all other elements (z-index: -1;) and fills the viewport with the specified background.*/
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue) ;
+  background-image: linear-gradient( 115deg, 
+  rgba(58, 58, 158, 0.8),
+  rgba(136, 136, 206, 0.7)),url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+/*h1 { ... }, p { ... }: Styles for h1 (heading) and p (paragraph) elements, adjusting font weight, line height, and font size. Both elements have margin adjustments to control spacing around them.*/
+h1{
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p{
+  font-size: 1.125rem; /*rem stands for "root em." itself (like em).Using rem units can make it easier to maintain consistent spacing and sizing across different elements in a webpage, especially when the font size varies. By setting font sizes and spacing in rem, they scale proportionally based on the root font size.
+
+  For example, if the root font size is set to 16px, then 1rem would equal 16px. If the root font size is changed to 20px, then 1rem would equal 20px, and so on.
+  
+  This relative nature makes rem particularly useful for responsive design, where elements need to adjust dynamically based on screen size and other factors.
+  
+  In the provided CSS snippet, rem is used for setting the font-size of the body element (font-size: 1rem;). This ensures that all text within the body element will be sized relative to the root font size, providing consistency and scalability across the webpage.*/
+}
+
+/*h1, p { ... }: This selector applies styles to both h1 (heading) and p (paragraph) elements. It removes the default top margin (margin-top: 0;) and adds a bottom margin of 0.5rem to create space between consecutive headings and paragraphs.*/
+h1, p{
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+/*label { ... }: This selector styles label elements. It makes the labels display as flex containers (display: flex;) with their child elements aligned vertically in the center (align-items: center;). It sets the font size to 1.125rem and adds a bottom margin of 0.5rem to create space between labels and the elements below them.*/
+label{
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+
+/*input, button, select, textarea { ... }: This selector applies styles to input, button, select, and textarea elements. It removes any default margins (margin: 0;), inherits the font family and font size from their parent elements (font-family: inherit; and font-size: inherit;), and adds a bottom margin of 0.5rem to create space between consecutive form elements.*/
+
+input, button, select, textarea {
+  margin: 0;
+  font-family:inherit ;
+  font-size: inherit;
+  margin-bottom: 0.5rem;
+}
+
+/*This part selects all <button> elements and removes their borders by setting border: none;*/
+button{
+  border:none
+}
+
+/*This section sets the width of the container to 100%.
+It sets the top margin to 3.125rem, and auto margins for left and right, effectively centering the container horizontally.*/
+.container {
+width: 100%;
+margin: 3.125rem auto 0 auto;
+}
+@media( min-width: 576px) {
+  container(
+    max-width: 540px;
+  )
+}
+
+@media ( min-width: 768px) {
+  .container (
+max-width: 720px;
+  )
+}
+/*These media queries adjust the maximum width of the container based on the viewport width.
+When the viewport width is at least 576px, the container's maximum width is set to 540px.
+When the viewport width is at least 768px, the container's maximum width is set to 720px.*/
+
+
+/*This section styles the description and clue elements.
+The description is styled with italic font style, light font weight (200), and a subtle text shadow.
+The clue element is styled with a left margin, smaller font size (0.9rem), and a light gray color (#e4e4e4).*/
+.description{
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.clue {
+margin-left: 0.25rem;
+font-size: 0.9rem;
+color: #e4e4e4;
+}
+.text {
+  text-align: center;
+}
+
+/*This section centers the text alignment for elements with the class text.
+This CSS code provides comprehensive styling for form elements, container, description, clue, and text alignment, ensuring a visually appealing and consistent design.
+*/
+
+/*form*/
+
+form {
+ background: var(--color-darkblue-alpha);
+ padding: 2.5rem 0.625rem;
+ border-radius: 0.25rem;
+}
+
+@media(min-width: 480px){
+  form{
+    padding: 2.5rem;
+  }
+}
+.form-group {
+  margin: 0 auto 25rem auto;
+  padding: : 0.25rem;
+
+}
+.form-control {
+display: block;
+width: 100%;
+height: 2.375rem;
+padding: 0.375rem 0.75rem;
+color: #495057;
+background-color: #fff ;
+background-clip: padding-box;
+border: 1px solid #ced4da;
+border-radius: 0.25rem;
+transition: border-color 0.15s ease-in-out box-shadow 0.15 ease-in-out
+}
+
+.form-control:focus{
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio, .input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+.input-textarea{
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+.submit-button{
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
